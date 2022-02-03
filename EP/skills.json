@@ -1,0 +1,308 @@
+{	"Academics: Astrophysics":
+	{	"id": "academics_astrophysics",
+		"apt": "COG",
+		"cat": [ "knowledge" ]
+	},
+	
+	"Animal Handling": 
+	{	"id": "animal_handling",
+		"apt": "SAV",
+		"cat": [ "active", "social" ]
+	},
+	
+	"Art: [Field]":
+	{	"id": "art_",
+		"apt": "SAV",
+		"cat": [ "knowledge" ]
+	},
+	
+	"Beam Weapons":
+	{
+		"id": "beam_weapons",
+		"apt": "COO",
+		"cat": [ "active", "combat" ]
+	},
+	
+	"Blades":
+	{	"id": "blades",
+		"apt": "SOM",
+		"cat": [ "active", "combat" ]
+	},
+	
+	"Climbing":
+	{	"id": "blades",
+		"apt": "SOM",
+		"cat": [ "active", "physical" ]
+	},
+	
+	"Clubs":
+	{	"id": "clubs",
+		"apt": "SOM",
+		"cat": [ "active, combat" ]
+	},
+	
+	"Deception":
+	{	"id": "deception",
+		"apt": "SAV",
+		"cat": [ "active", "social" ]
+	},
+	
+	"Demolitions":
+	{	"id": "demolitions",
+		"apt": "COG",
+		"cat": [ "active", "technical" ]
+	},
+	
+	"Disguise":
+	{	"id": "disguise",
+		"apt": "INT",
+		"cat": [ "active", "physical" ]
+	},
+	
+	"Flight":
+	{	"id": "flight",
+		"apt": "SOM",
+		"cat": [ "active", "physical" ]
+	},
+	
+	"Fray":
+	{	"id": "fray",
+		"apt": "REF",
+		"cat": [ "active", "combat" ]
+	},
+	
+	"Free Fall":
+	{	"id": "free_fall",
+		"apt": "REF",
+		"cat": [ "active", "physical" ]
+	},
+	
+	"Freerunning":
+	{	"id": "freerunning",
+		"apt": "SOM",
+		"cat": [ "active", "physical" ]
+	},
+	
+	"Gunnery":
+	{	"id": "gunnery",
+		"apt": "INT",
+		"cat": [ "active", "combat" ]
+	},
+	
+	"Hardware: Robotics":
+	{	"id": "hardware_robotics",
+		"apt": "COG",
+		"cat": [ "active", "technical" ]
+	},
+	
+	"Infiltration":
+	{	"id": "infiltration",
+		"apt": "COO",
+		"cat": [ "active", "physical" ]
+	},
+	
+	"Interest: Nightclubs":
+	{	"id": "interest_nightclubs",
+		"apt": "COG",
+		"cat": [ "knowledge" ]
+	},
+	
+	"Interest: Factors":
+	{	"id": "interest_factors",
+		"apt": "COG",
+		"cat": [ "knowledge" ]
+	},
+
+	"Interest: Exoplanets":
+	{	"id": "interest_exoplanets",
+		"apt": "COG",
+		"cat": [ "knowledge" ]
+	},
+	
+	"Interest: Titan Tech":
+	{	"id": "interest_titan_tech",
+		"apt": "COG",
+		"cat": [ "knowledge" ]
+	},
+	
+	"Interest: Criminal Groups":
+	{	"id": "interest_criminal_groups",
+		"apt": "COG",
+		"cat": [ "knowledge" ]
+	},
+		
+	"Interfacing":
+	{	"id": "interfacing",
+		"apt": "COG",
+		"cat": [ "active", "technical" ]
+	},
+	
+	"Intimidation":
+	{	"id": "intimidation",
+		"apt": "SAV",
+		"cat": [ "active", "social" ]
+	},
+	
+	"Investigation":
+	{	"id": "investigation",
+		"apt": "INT",
+		"cat": [ "active", "mental" ]
+	},
+	
+	"Kinesics":
+	{	"id": "kinesics",
+		"apt": "SAV",
+		"cat": [ "active", "social" ]
+	},
+	
+	"Kinetic Weapons":
+	{	"id": "kinetic_weapons",
+		"apt": "COO",
+		"cat": [ "active", "combat" ]
+	},
+	
+	"Language: Hindi":
+	{	"id": "language_hindi",
+		"apt": "INT",
+		"cat": [ "knowledge" ]
+	},
+	
+	"Language: English":
+	{	"id": "language_english",
+		"apt": "INT",
+		"cat": [ "knowledge" ]
+	},
+	
+	"Medicine: Paramedic":
+	{	"id": "medicine_paramedic",
+		"apt": "COG",
+		"cat": [ "active", "technical" ]
+	},
+	
+	"Navigation":
+	{	"id": "navigation",
+		"apt": "INT",
+		"cat": [ "active", "mental" ]
+	},
+	
+	"Networking: Criminal":
+	{	"id": "networking_criminal",
+		"apt": "SAV",
+		"cat": [ "active", "social" ]
+	},
+	
+	"Networking: Firewall":
+	{	"id": "networking_firewall",
+		"apt": "SAV",
+		"cat": [ "active", "social" ]
+	},
+	
+	"Palming":
+	{	"id": "palming",
+		"apt": "COO",
+		"cat": [ "active", "physical" ]
+	},
+	
+	"Perception":
+	{	"id": "perception",
+		"apt": "INT",
+		"cat": [ "active", "mental" ]
+	},
+	
+	"Persuasion":
+	{	"id": "persuasion",
+		"apt": "INT",
+		"cat": [ "active", "social" ]
+	},
+	
+	"Pilot: Aircraft":
+	{	"id": "pilot_aircraft",
+		"apt": "REF",
+		"cat": [ "active", "vehicle" ]
+	},
+	
+	"Profession: Medical Care":
+	{	"id": "profession_medical_care",
+		"apt": "COG",
+		"cat": [ "knowledge" ]
+	},
+	
+	"Profession: Security Ops":
+	{	"id": "profession_security_ops",
+		"apt": "COG",
+		"cat": [ "knowledge" ]
+	},
+	
+	
+	"Programming":
+	{	"id": "programming",
+		"apt": "COG",
+		"cat": [ "active", "technical" ]
+	},
+	
+	"Protocol":
+	{	"id": "protocol",
+		"apt": "SAV",
+		"cat": [ "active", "social" ]
+	},
+	
+	"Psi Assault":
+	{	"id": "psi_assault",
+		"apt": "WIL",
+		"cat": [ "active", "mental", "psi" ]
+	},
+	
+	"Psychosurgery":
+	{	"id": "psychosurgery",
+		"apt": "INT",
+		"cat": [ "active", "technical" ]
+	},
+	
+	"Research":
+	{	"id": "research",
+		"apt": "COG",
+		"cat": [ "active", "technical" ]
+	},
+	
+	"Scrounging":
+	{	"id": "scrounging",
+		"apt": "INT",
+		"cat": [ "active", "mental" ]
+	},
+	
+	"Seeker Weapons":
+	{	"id": "seeker_weapons",
+		"apt": "COO",
+		"cat": [ "active", "combat" ]
+	},
+	
+	"Sense":
+	{	"id": "sense",
+		"apt": "INT",
+		"cat": [ "active", "mental", "psi" ]
+	},
+	
+	"Spray Weapons":
+	{	"id": "spray_weapons",
+		"apt": "COO",
+		"cat": [ "active", "combat" ]
+	},
+	
+	"Swimming":
+	{	"id": "swimming",
+		"apt": "SOM",
+		"cat": [ "active", "physical" ]
+	},
+	
+	"Throwing Weapons":
+	{	"id": "throwing_weapons",
+		"apt": "COO",
+		"cat": [ "active", "combat" ]
+	},
+	
+	"Unarmed Combat":
+	{	"id": "unarmed_combat",
+		"apt": "SOM",
+		"cat": [ "active", "combat" ]
+	}
+}

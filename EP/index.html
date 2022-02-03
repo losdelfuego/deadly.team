@@ -1,0 +1,583 @@
+<html>
+<head>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/cookie.min.js"></script>
+<script src="./js/storage.js"></script>
+
+<link rel="stylesheet" href="./style.css">
+
+
+<title>Eclipse Phase Character Sheet</title>
+</head>
+
+<body>
+
+<div id="top">
+
+<h1 id="name" class="manual">Character Name</h1>
+<h2 id="background" class="manual">Character Background</h2>
+
+<select id="morphselect">
+</select>
+
+<div id="damage_stress">
+	<form id="new_damage">
+		Damage: <input type="text" id="damage" value="" size="5">
+		<input type="submit" value="&#x2713;">
+	</form>
+
+	<form id="new_stress">
+		Stress:	<input type="text" id="stress" value="" size="5">
+		<input type="submit" value="&#x2713;">
+	</form>
+</div>
+
+<div id="dice">
+	<form action="">
+		<input type="radio" name="roll_type" id="1d100" value="1d100" checked="checked" />1d100<br>
+		<input type="radio" name="roll_type" id="2d100" value="2d100" />2d100/2
+	</form>
+
+	<button onclick="roll_dice()">Roll</button>
+	<p id="dice_result"></p>
+</div>
+
+<table id="day">
+	<tr>
+		<td>Current Day:</td>
+		<td class="manual" id="current_day" class="manual">00</td>
+	</tr>
+</table>
+
+</div>
+
+<div id="main">
+
+
+<div id="left_stats">
+<table id="ego_basic">
+	<tr>
+		<td class="table_left">Faction:</td>
+		<td class="table_right manual" id="faction">Faction</td>
+	</tr>
+	<tr>
+		<td class="table_left">Gender:</td>
+		<td class="table_right manual" id="gender">Gender</td>
+	</tr>
+	<tr>
+		<td class="table_left">Age:</td>
+		<td class="table_right manual" id="age">20</td>
+	</tr>
+	<tr>
+		<td class="table_left">Motivation 1:</td>
+		<td class="table_right manual" id="motivation1">Motivation 1</td>
+	</tr>
+	<tr>
+		<td class="table_left">Motivation 2:</td>
+		<td class="table_right manual" id="motivation2">Motivation 2</td>
+	</tr>
+	<tr>
+		<td class="table_left">Motivation 3:</td>
+		<td class="table_right manual" id="motivation3">Motivation 3</td>
+	</tr>
+</table>
+
+<table id="ego_variable">
+	<tr>
+		<td class="table_left">Rez Points:</td>
+		<td class="table_right manual" id="rezpoints">0</td>
+	</tr>
+	<tr>
+		<td class="table_left">Max Moxie:</td>
+		<td class="table_right manual" id="moxie_max">3</td>
+	</tr>
+	<tr>
+		<td class="table_left">Current Moxie:</td>
+		<td class="table_right manual" id="moxie">0</td>
+	</tr>
+</table>
+
+<table id="morph_basic">
+	<tr>
+		<td class="table_left">Morph Type: </td>
+		<td class="table_right automatic" id="morph_type"></td>
+	</tr>
+	<tr>
+		<td class="table_left">Visible Gender: </td>
+		<td class="table_right manual" id="visible_gender">Visible Gender</td>
+	</tr>
+	<tr>
+		<td class="table_left">Visible Age: </td>
+		<td class="table_right manual" id="visible_age">Visible Age</td>
+	</tr>
+	<tr>
+		<td class="table_left">Mobility System: </td>
+		<td class="table_right automatic" id="mobility_system"></td>
+	</tr>
+	<tr>
+		<td class="table_left">Movement Rate: </td>
+		<td class="table_right automatic" id="movement_rate"></td>
+	</tr>
+</table>
+</div>
+
+<div id="center_stats">
+<table id="aptitudes">
+
+	<thead>
+		<tr>
+			<th class="table_left"></th>
+			<th class="aptitude" title="Cognition">COG</th>
+			<th class="aptitude" title="Coordination">COO</th>
+			<th class="aptitude" title="Intuition">INT</th>
+			<th class="aptitude" title="Reflexes">REF</th>
+			<th class="aptitude" title="Savvy">SAV</th>
+			<th class="aptitude" title="Somatics">SOM</th>
+			<th class="aptitude" title="Willpower">WIL</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td class="table_left">BASE</td>
+			<td title="Ego Cognition" class="manual" id="base_cog">10</td>
+			<td title="Ego Coordination" class="manual" id="base_coo">10</td>
+			<td title="Ego Intuition" class="manual" id="base_int">10</td>
+			<td title="Ego Reflexes" class="manual" id="base_ref">10</td>
+			<td title="Ego Savvy" class="manual" id="base_sav">10</td>
+			<td title="Ego Somatics" class="manual" id="base_som">10</td>
+			<td title="Ego Willpower" class="manual" id="base_wil">10</td>
+		</tr>
+		<tr>
+			<td>MORPH</td>
+			<td title="Morph Cognition Bonus" class="automatic" id="morph_cog">0</td>
+			<td title="Morph Coordination Bonus" class="automatic" id="morph_coo">0</td>
+			<td title="Morph Intuition Bonus" class="automatic" id="morph_int">0</td>
+			<td title="Morph Reflexes Bonus" class="automatic" id="morph_ref">0</td>
+			<td title="Morph Savvy Bonus" class="automatic" id="morph_sav">0</td>
+			<td title="Morph Somatics Bonus" class="automatic" id="morph_som">0</td>
+			<td title="Morph Willpower Bonus" class="automatic" id="morph_wil">0</td>
+		</tr>
+		<tr>
+			<td class="table_left">TOTAL</td>
+			<td class="automatic" id="cog"></td>
+			<td class="automatic" id="coo"></td>
+			<td class="automatic" id="int"></td>
+			<td class="automatic" id="ref"></td>
+			<td class="automatic" id="sav"></td>
+			<td class="automatic" id="som"></td>
+			<td class="automatic" id="wil"></td>
+		</tr>
+	</tbody>
+</table>
+
+<table id="stats">
+	<thead>
+		<tr>
+			<th title="Trauma Threshold">TT</th>
+			<th title="Lucidity">LUC</th>
+			<th title="Insanity Rating">IR</th>
+			<th title="Wound Threshold">WT</th>
+			<th title="Durability">DUR</th>
+			<th title="Death Rating">DR</th>
+			<th title="Initiative (Roll 1d10, add this value)">INIT</th>
+			<th title="Speed">SPD</th>
+			<th title="Damage Bonus">DB</th>
+			<th title="Luck">LUCK</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class='automatic' id='tt'></td>
+			<td class='automatic' id='luc'></td>
+			<td class='automatic' id='ir'></td>
+			<td class='automatic' id='wt'></td>
+			<td class='automatic' id='dur'></td>
+			<td class='automatic' id='dr'></td>
+			<td class='automatic' id='init'></td>
+			<td class='manual' id='speed'>1</td>
+			<td class='automatic' id='db'></td>
+			<td class='automatic' id='luck'></td>
+		</tr>
+	</tbody>
+</table>
+
+
+<table id="current_damage_table">
+	<tr>
+		<td class="table_left">Current Damage: </td>
+		<td id="current_damage" class="manual">0</td>
+	</tr>
+	<tr>
+		<td class="table_left">Current Wounds: </td>
+		<td id="current_wounds" class="manual">0</td>
+	</tr>
+	<tr>
+		<td class="table_left">New Wounds: </td>
+		<td id="new_wounds">0</td>
+	</tr>
+	<tr>
+		<td class="table_left">Current Stress: </td>
+		<td id="current_stress" class="manual">0</td>
+	</tr>
+	<tr>
+		<td class="table_left">Current Trauma: </td>
+		<td id="current_trauma" class="manual">0</td>
+	</tr>
+	<tr>
+		<td class="table_left">New Traumas: </td>
+		<td id="new_trauma">0</td>
+	</tr>
+</table>
+
+<ul id="morph_implants">
+<lh>Implants:</lh>
+</ul>
+
+</div>
+
+
+
+<table id="skills_table">
+	<thead>
+		<tr>
+			<th>Skill</th>
+			<th>Aptitude</th>
+			<th>Base</th>
+			<th>Ego</th>
+			<th>Morph</th>
+			<th>Other</th>
+			<th>Total</th>
+		</tr>
+	</thead>
+	<tbody id="skills">
+	</tbody>
+</table>
+
+</div>
+</body>
+
+</html>
+
+<script>
+
+$(document).ready(function() {
+
+//this loads a list of morphs from a JSON file and displays the names in the morph selector
+	$.getJSON('./morphs.json', function(morphdata) {
+		$('#morphselect').append('<option value="">Select Morph</option>');
+		$.each(morphdata, function(i, m) {
+			$('#morphselect').append($("<option />").text(m.name));
+		});
+        $('#morphselect').append('<option value="">New Morph</option>');
+        
+//this checks to see if a morph is already selected. if so, it goes to the update_morph() function
+		if (localStorage['morphselect']) {
+			$('#morphselect').val( localStorage['morphselect']).attr('selected', true);
+			update_morph();
+		}
+	});
+
+// this will eventually update morph stats from the selection		
+	$('#morphselect').on('change', function() {
+		update_morph();
+	});
+
+//this section makes editable attributes editable
+	$('#name').storage({storageKey:'name'});
+	$('#background').storage({storageKey:'background'});
+	$('#faction').storage({storageKey:'faction'});
+	$('#gender').storage({storageKey:'gender'});
+	$('#age').storage({storageKey:'age'});
+	$('#motivation1').storage({storageKey:'motivation1'});
+	$('#motivation2').storage({storageKey:'motivation2'});
+	$('#motivation3').storage({storageKey:'motivation3'});
+
+	$('#rezpoints').storage({storageKey:'rezpoints'});
+	$('#moxie_max').storage({storageKey:'moxie_max',onExit:function() { update_results(); } });
+	$('#moxie').storage({storageKey:'moxie'});
+	
+	$('#visible_gender').storage({storageKey:'visible_gender'});
+	$('#visible_age').storage({storageKey: 'visible_age'});
+
+	$('#base_cog').storage({storageKey:'base_cog',onExit:function() { update_results(); } });
+	$('#base_coo').storage({storageKey:'base_coo',onExit:function() { update_results(); } });
+	$('#base_int').storage({storageKey:'base_int',onExit:function() { update_results(); } });
+	$('#base_ref').storage({storageKey:'base_ref',onExit:function() { update_results(); } });
+	$('#base_sav').storage({storageKey:'base_sav',onExit:function() { update_results(); } });
+	$('#base_som').storage({storageKey:'base_som',onExit:function() { update_results(); } });
+	$('#base_wil').storage({storageKey:'base_wil',onExit:function() { update_results(); } });
+	
+	$('#speed').storage({storageKey:'spd'});
+	
+	$('#current_damage').storage({storageKey:'current_damage', onExit:function() { localStorage['damage'] = $('#current_damage').text(); check_colors(); } });
+	$('#current_wounds').storage({storageKey:'current_wounds', onExit:function() { localStorage['wounds'] = $('#current_wounds').text(); update_results(); } });
+	$('#current_stress').storage({storageKey:'current_stress', onExit:function() { localStorage['stress'] = $('#current_stress').text();  check_colors(); } });
+	$('#current_trauma').storage({storageKey:'current_trauma', onExit:function() { localStorage['trauma'] = $('#current_trauma').text(); update_results(); } });
+	$('#current_day').storage({storageKey:'current_day'});
+	
+	//this part should, hopefully, update damage and wounds and stress and trauma.
+	
+	if (localStorage['damage']) {
+		$('#current_damage').html( localStorage['damage']);
+	}
+	
+	if (localStorage['wounds']) {
+		$('#current_wounds').html( localStorage['wounds']);
+	}
+	
+	if (localStorage['stress']) {
+		$('#current_stress').html( localStorage['stress']);
+	}
+	
+	if (localStorage['trauma']) {
+		$('#current_trauma').html( localStorage['trauma']);
+	}
+	
+	
+	
+	$('#new_damage').submit(function() {
+		var new_damage = $('#damage').val();
+		var wt = $('#wt').text();
+		var new_wounds = ( Math.floor( new_damage / wt ));
+		var current_wounds = $('#current_wounds').text();
+		current_wounds = parseInt(current_wounds) + parseInt(new_wounds);
+		$('#current_wounds').html(current_wounds);
+		var current_damage = $('#current_damage').text();
+		current_damage = parseInt(current_damage) + parseInt(new_damage);
+		$('#current_damage').html(current_damage);
+		$('#new_wounds').html(new_wounds);
+		localStorage['damage'] = current_damage;
+		localStorage['wounds'] = current_wounds;
+		$('#damage').val('');
+		$('#damage').blur();
+		update_results();
+		return false;
+	});
+
+	$('#new_stress').submit(function() {
+		var new_stress = $('#stress').val();
+		var tt = $('#tt').text();
+		var new_trauma = ( Math.floor( new_stress / tt ));
+		var current_trauma = $('#current_trauma').text();
+		current_trauma = parseInt(current_trauma) + parseInt(new_trauma);
+		$('#current_trauma').html(current_trauma);
+		var current_stress = $('#current_stress').text();
+		current_stress = parseInt(current_stress) + parseInt(new_stress);
+		$('#current_stress').html(current_stress);
+		$('#new_trauma').html(new_trauma);
+		localStorage['stress'] = current_stress;
+		localStorage['trauma'] = current_trauma;
+		$('#stress').val('');
+		$('#stress').blur();
+		update_results();
+		return false;
+	});
+
+//load list of skills, populate skills table, make Ego skills level storagified
+	$.getJSON('./skills.json', function(skills) {
+		$.each(skills, function(k, v) {
+			$("#skills").append('<tr id="' + v.id + '" class="' + v.cat + '"><td class="table_left skill_name">' + k + '</td><td class="skill_aptitude">' + v.apt + '</td><td class="skill_base"></td><td class="skill_ego manual"></td><td class="skill_morph"></td><td class="skill_other"></td><td class="skill_total automatic"></td></tr>');
+		});
+	}).promise().done( function() {
+		$('#skills td.skill_ego').each(function() {
+			$(this).storage({storageKey:$(this).closest('tr').attr('id'), onExit:function() { update_results(); } });
+
+		});
+	});
+
+	update_results();
+	
+});
+
+
+function update_results() {
+
+	var base_cog = $('#base_cog').html();
+	var base_coo = $('#base_coo').html();
+	var base_int = $('#base_int').html();
+	var base_ref = $('#base_ref').html();
+	var base_sav = $('#base_sav').html();
+	var base_som = $('#base_som').html();
+	var base_wil = $('#base_wil').html();
+
+	var morph_cog = $('#morph_cog').html();
+	var morph_coo = $('#morph_coo').html();
+	var morph_int = $('#morph_int').html();
+	var morph_ref = $('#morph_ref').html();
+	var morph_sav = $('#morph_sav').html();
+	var morph_som = $('#morph_som').html();
+	var morph_wil = $('#morph_wil').html();
+	
+	var cog = +base_cog + +morph_cog;
+	var coo = +base_coo + +morph_coo;
+	var int = +base_int + +morph_int;
+	var ref = +base_ref + +morph_ref;
+	var sav = +base_sav + +morph_sav;
+	var som = +base_som + +morph_som;
+	var wil = +base_wil + +morph_wil;
+	
+	var dur = $('#dur').html();
+
+	$('#cog').html(cog);
+	$('#coo').html(coo);
+	$('#int').html(int);
+	$('#ref').html(ref);
+	$('#sav').html(sav);
+	$('#som').html(som);
+	$('#wil').html(wil);
+	
+	var init_mod = parseInt($('#current_wounds').text()) + parseInt($('#current_trauma').text());
+	console.log(init_mod);
+	
+	var skill_mod = init_mod * -10;
+	console.log(skill_mod);
+	$('td.skill_other').html(skill_mod);
+	
+	var luc = wil*2;
+	var tt = Math.ceil(luc/5);
+	var ir = luc*2;
+	var wt = Math.ceil( dur / 5 );
+	var init = Math.ceil( (int+ref)/5 ); //still have to add in wound/trauma modifiers to initiative variable
+	var db = Math.ceil( (parseInt(som) + parseInt(dur)) / 20 );
+	var luck = $('#moxie_max').text() * 10;
+	if( $('#morph_type').text() == 'Biomorph') {
+		var dr = Math.ceil(dur*1.5); }
+	else if( $('#morph_type').text() == 'Synthmorph') {
+		var dr = (dur*2); }
+	
+	$('#luc').html(luc);
+	$('#tt').html(tt);
+	$('#ir').html(ir);
+	$('#wt').html(wt);
+	$('#dr').html(dr);
+	$('#init').html(init-init_mod);
+	$('#db').html(db);
+	$('#luck').html(luck);
+	
+	check_colors();
+	
+	//an attempt to dynamically update skills
+	$('#skills tr:contains("COG") td.skill_base').each(function() {
+		$(this).html(cog);
+	 });
+	 
+	$('#skills tr:contains("COO") td.skill_base').each(function() {
+		$(this).html(coo);
+	 });
+
+	$('#skills tr:contains("INT") td.skill_base').each(function() {
+		$(this).html(int);
+	 });
+	
+	$('#skills tr:contains("REF") td.skill_base').each(function() {
+		$(this).html(ref);
+	 });
+	
+	$('#skills tr:contains("SAV") td.skill_base').each(function() {
+		$(this).html(sav);
+	 });
+	
+	$('#skills tr:contains("SOM") td.skill_base').each(function() {
+		$(this).html(som);
+	 });
+		
+	$('#skills tr:contains("WIL") td.skill_base').each(function() {
+		$(this).html(wil);
+	 });
+	 
+	$('#skills tr').each(function() {
+		var base = parseInt( $(this).find('.skill_base').html() ) || 0;
+		var ego = parseInt( $(this).find('.skill_ego').html() ) || 0;
+		var morph = parseInt( $(this).find('.skill_morph').html() ) || 0;
+		var other = parseInt( $(this).find('.skill_other').html() ) || 0;
+		var total = parseInt( base + ego + morph + other );
+		$(this).find('.skill_total').html(total);
+	});
+};
+
+function update_morph() {
+    
+    var selected = $('#morphselect option:selected').text();
+    localStorage['morphselect'] = selected;
+	var morphname = $('#morphselect').val();
+	$.getJSON('./morphs.json', function(morphdata) {
+		$.each(morphdata, function(key, value) {
+		});
+		var currentmorph = morphdata[morphname];
+		console.log( currentmorph );
+		$('#morph_cog').html(currentmorph.cog);
+		$('#morph_coo').html(currentmorph.coo);
+		$('#morph_int').html(currentmorph.int);
+		$('#morph_ref').html(currentmorph.ref);
+		$('#morph_sav').html(currentmorph.sav);
+		$('#morph_som').html(currentmorph.som);
+		$('#morph_wil').html(currentmorph.wil);
+		
+		$('#morph_type').html(currentmorph.type);
+		$('#mobility_system').html(currentmorph.mobility_system);
+		$('#movement_rate').html(currentmorph.movement_rate[0] + ' / ' + currentmorph.movement_rate[1]);
+		
+		$('#dur').html(currentmorph.dur);
+		
+//		incorporate morph skill bonuses into skill table		
+		$('td.skill_morph').html('');
+		$.each(currentmorph.bonus, function(s,b) {
+			console.log( s, b );
+			$('#' + s + ' td.skill_morph').html(b);
+		});
+		
+		//try to update morph implants
+		$('#morph_implants').html('<th>Implants:</th>');
+		$.each(currentmorph.implants, function(k,v) {
+			$('#morph_implants').append('<li>' + v + '</li>');
+		});
+		
+		//add descriptions to morph implants
+		$.getJSON('./gear.json', function(gear_list) {
+			$('#morph_implants li').each(function() {
+			var gear = $(this).text();
+			console.log(gear);
+			console.log(gear_list[gear].desc);
+			$(this).prop('title', gear_list[gear].desc);
+			});
+		});
+		
+		update_results();
+		
+	});
+};
+
+function check_colors() {
+	var current_damage = $('#current_damage').text();
+	var dur = $('#dur').text();
+	var dr = $('#dr').text();
+	var current_stress = $('#current_stress').text();
+	var luc = $('#luc').text();
+	var ir = $('#ir').text();
+	if ( +current_damage >= +dr ) { $('#current_damage').css('background', 'red');
+	} else if ( +current_damage < +dr && +current_damage >= +dur ) { $('#current_damage').css('background', 'orange');
+	} else if ( +current_damage < +dur ) { $('#current_damage').css('background', 'white'); };
+	
+	if ( +current_stress >= +ir ) { $('#current_stress').css('background', 'red');
+	} else if ( +current_stress < +ir && +current_stress >= +luc ) { $('#current_stress').css('background', 'orange');
+	} else if ( +current_stress < +luc ) { $('#current_stress').css('background', 'white'); };
+};
+
+function roll_dice() {
+	if ( $("#1d100").is(':checked') == true ) { 
+		var diceone = Math.floor(Math.random() * 100);
+		var dice_result = diceone;
+		}
+	else if ( $("#2d100").is(':checked') == true ) {
+		var diceone = Math.floor(Math.random() * 100);
+		var dicetwo = Math.floor(Math.random() * 100);
+		var dice_result = Math.floor(( +diceone + +dicetwo) / 2);
+		}
+	$('#dice_result').html(("0" + +dice_result).slice(-2));
+	
+	};
+
+</script>
+
+

@@ -1,0 +1,204 @@
+body {
+	font-family: "Lucida Grande", Lucida, Verdana, sans-serif;
+	margin-top: 80px;
+}
+
+main{
+	width: 90%;
+	height: 90%;
+}
+
+h1 {
+	text-transform: capitalize;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	font-variant: normal;
+	top: 0;
+	left: 0;
+	position: fixed;
+	font-size: 1.6em;
+	width: 20%;
+}
+
+h2 {
+	font-variant: small-caps;
+	padding: 0;
+	margin: 0;
+	width: 20%;
+	position: fixed;
+	left: 0;
+	font-size: 1em;
+	top: 2em;
+}
+
+#ego_basic {
+	margin: 10px;
+}
+
+.table_left {
+	text-align: right;
+}
+
+.table_right {
+	text-align: left;
+	padding-left: 5px;
+}
+
+.manual {
+	color: #298b20;
+	background-color: #eff9ef;
+}
+
+.automatic {
+	color: #1c1fe3;
+}
+
+.aptitude {
+	width: 2em;
+}
+
+td {
+	text-align: center;
+}
+
+#morphselect {
+	background: white;
+	width: 10em;
+	line-height: 1;
+	border: 0;
+	border-radius: 0;
+	font: 1em "Lucida Grande", Lucida, Verdana, sans-serif;
+	color: #298b20;
+	padding: 0;
+	height: 1.2em;
+	position: fixed;
+	top: 10px;
+	left: 35%;
+	height: 20px;
+}
+
+tr:hover {
+	background-color: #ff9595;
+}
+
+#damage_stress {
+	position: fixed;
+	top: 0;
+	float: right;
+	text-align: right;
+	left: 20%;
+	padding: 0;
+	margin: 0;
+	width: 200px;
+	font-size: 10px;
+}
+
+#damage_stress form {
+	margin: 0;
+	padding: 0;
+}
+
+#ego_basic {
+	clear: both;
+	float: none;
+}
+
+input[type=submit] {
+    width: 2em;  height: 1em;
+	margin: 0;
+	padding: 0;
+}
+
+#aptitudes {
+	float: right;
+	top: 0;
+}
+
+#stats {
+	float: right;
+}
+
+#skills_table {
+	float: right;
+	top: 60px;
+	position: absolute;
+	left: 60%;
+}
+
+#left_stats {
+	position: absolute;
+	top: 60px;
+	left: 10px;
+	width: 30%;
+}
+
+#center_stats {
+	float: none;
+	width: 20%;
+	position: absolute;
+	top: 60px;
+	left: 30%;
+}
+
+#right_stats {
+	width: 20%;
+	position: absolute;
+	top: 60px;
+	left: 60%;
+}
+
+#top {
+	background-color: #dbd2d2;
+	font-size: 100%;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	height: 55px;
+}
+
+table {
+	margin: 20px;
+}
+
+#day {
+	position: absolute;
+	right: 10px;
+}
+
+#dice {
+	position: fixed;
+	top: 0;
+	float: none;
+	text-align: right;
+	left: 50%;
+	padding: 0;
+	margin: 0;
+	width: auto;
+	font-size: 10px;
+	height: 50px;
+	border-style: none;
+}
+
+#dice form {
+	float: left;
+	text-align: left;
+	margin-bottom: auto;
+	margin-top: 3px;
+}
+
+#dice p {
+	float: none;
+	clear: none;
+	color: red;
+	margin: 0;
+	font-size: 2em;
+	text-align: center;
+}
+
+#dice button {
+}
