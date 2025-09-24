@@ -22,6 +22,15 @@
                  length="31841802"
                  type="audio/mpeg"/>
     </item>
+    
+    <item>
+      <title>Docking in Perfect Harmony</title>
+      <guid>ep3</guid>
+      <pubDate>Sun, 21 Sep 2025 10:00:00 GMT</pubDate>
+      <enclosure url="https://deadly.team/podcast/files/Null_Homeworld_Engineers_and_Project_NEMESIS__From_Cosmic_Archi.mp3"
+                 length="21580068"
+                 type="audio/mpeg"/>
+    </item>
 
   </channel>
 </rss>
