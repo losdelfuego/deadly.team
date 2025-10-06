@@ -40,6 +40,15 @@
                  length="32545645"
                  type="audio/mpeg"/>
     </item>
+    
+    <item>
+      <title>Up Up and Away</title>
+      <guid>ep5</guid>
+      <pubDate>Sun, 06 Oct 2025 10:00:00 GMT</pubDate>
+      <enclosure url="https://deadly.team/podcast/files/From_Corporate_War_to_Cyberzombie_Raids__Project_NEMESIS_Launch.mp3"
+                 length="31620702"
+                 type="audio/mpeg"/>
+    </item>
 
   </channel>
 </rss>
