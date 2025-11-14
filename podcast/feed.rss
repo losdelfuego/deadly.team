@@ -67,6 +67,15 @@
                  type="audio/mpeg"/>
     </item>
 
+    <item>
+      <title>MARIANNE Madness</title>
+      <guid>ep7</guid>
+      <pubDate>Sun, 09 Nov 2025 10:00:00 GMT</pubDate>
+      <enclosure url="https://deadly.team/podcast/files/ep07_MARIANNEMadness.mp3"
+                 length="21827082"
+                 type="audio/mpeg"/>
+    </item>
+
 
   </channel>
 </rss>
