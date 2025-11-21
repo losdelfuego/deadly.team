@@ -76,6 +76,15 @@
                  type="audio/mpeg"/>
     </item>
 
+    <item>
+      <title>Stormin' Normandy</title>
+      <guid>ep8</guid>
+      <pubDate>Sun, 16 Nov 2025 10:00:00 GMT</pubDate>
+      <enclosure url="https://deadly.team/podcast/files/ep08_StorminNormandy.mp3"
+                 length="20607477"
+                 type="audio/mpeg"/>
+    </item>
+
 
   </channel>
 </rss>
