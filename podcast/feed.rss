@@ -86,5 +86,15 @@
     </item>
 
 
+    <item>
+      <title>Every Scar is a Lesson</title>
+      <guid>ep9</guid>
+      <pubDate>Sun, 23 Nov 2025 10:00:00 GMT</pubDate>
+      <enclosure url="https://deadly.team/podcast/files/ep09_EveryScarIsALesson.mp3"
+                 length="23790654"
+                 type="audio/mpeg"/>
+    </item>
+
+
   </channel>
 </rss>
