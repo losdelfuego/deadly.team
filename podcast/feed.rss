@@ -95,6 +95,15 @@
                  type="audio/mpeg"/>
     </item>
 
+    <item>
+      <title>Introducing Dr. D</title>
+      <guid>ep10</guid>
+      <pubDate>Sun, 30 Nov 2025 10:00:00 GMT</pubDate>
+      <enclosure url="https://deadly.team/podcast/files/ep10_IntroducingDrD.mp3"
+                 length="10726922"
+                 type="audio/mpeg"/>
+    </item>
+
 
   </channel>
 </rss>
