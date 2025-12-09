@@ -104,6 +104,15 @@
                  type="audio/mpeg"/>
     </item>
 
+    <item>
+      <title>A Little Wet Work</title>
+      <guid>ep11</guid>
+      <pubDate>Sun, 07 Dec 2025 10:00:00 GMT</pubDate>
+      <enclosure url="https://deadly.team/podcast/files/ep11_ALittleWetWork.m4a"
+                 length="55812781"
+                 type="audio/m4a"/>
+    </item>
+
 
   </channel>
 </rss>
