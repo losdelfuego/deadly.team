@@ -113,6 +113,15 @@
                  type="audio/m4a"/>
     </item>
 
+    <item>
+      <title>No Ranch is an Island</title>
+      <guid>ep12</guid>
+      <pubDate>Sun, 14 Dec 2025 10:00:00 GMT</pubDate>
+      <enclosure url="https://deadly.team/podcast/files/ep12_NoRanchIsAnIsland.m4a"
+                 length="71378531"
+                 type="audio/m4a"/>
+    </item>
+
 
   </channel>
 </rss>
