@@ -122,6 +122,15 @@
                  type="audio/m4a"/>
     </item>
 
+    <item>
+      <title>All Ruxpins Era</title>
+      <guid>ep13</guid>
+      <pubDate>Sun, 21 Dec 2025 10:00:00 GMT</pubDate>
+      <enclosure url="https://deadly.team/podcast/files/ep13_AllRuxpinsEra.m4a"
+                 length="45788410"
+                 type="audio/m4a"/>
+    </item>
+
 
   </channel>
 </rss>
