@@ -133,22 +133,15 @@
 
 
     <item>
-      <title>Smooth Criminals</title>
+      <title>Smooth Criminals (FIXED)</title>
       <guid>ep14</guid>
       <pubDate>Sun, 28 Dec 2025 10:00:00 GMT</pubDate>
       <enclosure url="https://deadly.team/podcast/files/ep14_SmoothCriminals.m4a"
-                 length="54050685"
+                 length="28357472"
                  type="audio/m4a"/>
     </item>
 
-    <item>
-      <title>Smooth Criminals (Alt)</title>
-      <guid>ep14B</guid>
-      <pubDate>Sun, 28 Dec 2025 10:00:00 GMT</pubDate>
-      <enclosure url="https://deadly.team/podcast/files/ep14B_SmoothCriminals.m4a"
-                 length="52001493"
-                 type="audio/m4a"/>
-    </item>
+
 
 
 
