@@ -150,7 +150,14 @@
                  type="audio/m4a"/>
     </item>
 
-
+    <item>
+      <title>Du Hast Blimp</title>
+      <guid>ep16</guid>
+      <pubDate>Sun, 26 Feb 2026 15:00:00 GMT</pubDate>
+      <enclosure url="https://deadly.team/podcast/files/ep16_DuHastBlimp.m4a"
+                 length="40378626"
+                 type="audio/m4a"/>
+    </item>
 
 
   </channel>
