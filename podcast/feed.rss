@@ -159,6 +159,15 @@
                  type="audio/m4a"/>
     </item>
 
+    <item>
+      <title>The Coalition of the Willing</title>
+      <guid>ep17</guid>
+      <pubDate>Wed, 04 March 2026 21:47:00 GMT</pubDate>
+      <enclosure url="https://deadly.team/podcast/files/ep17_TheCoalitionOfTheWilling.m4a"
+                 length="32116352"
+                 type="audio/m4a"/>
+    </item>
+
 
   </channel>
 </rss>
