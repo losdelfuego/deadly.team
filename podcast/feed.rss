@@ -168,6 +168,16 @@
                  type="audio/m4a"/>
     </item>
 
+    <item>
+      <title>Defend the Block</title>
+      <guid>ep18</guid>
+      <pubDate>Sun, 15 March 2026 21:47:00 GMT</pubDate>
+      <enclosure url="https://deadly.team/podcast/files/ep18_DefendTheBlock.m4a"
+                 length="41368800"
+                 type="audio/m4a"/>
+    </item>
+
+
 
   </channel>
 </rss>
