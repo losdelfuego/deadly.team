@@ -177,6 +177,14 @@
                  type="audio/m4a"/>
     </item>
 
+    <item>
+      <title>Defend the Block</title>
+      <guid>ep19</guid>
+      <pubDate>Tue, 17 March 2026 12:17:00 GMT</pubDate>
+      <enclosure url="https://deadly.team/podcast/files/ep19_SprawlGorillas.m4a"
+                 length="32345809"
+                 type="audio/m4a"/>
+    </item>
 
 
   </channel>
