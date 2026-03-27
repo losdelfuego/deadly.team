@@ -186,6 +186,14 @@
                  type="audio/m4a"/>
     </item>
 
+    <item>
+      <title>Burger and Fries</title>
+      <guid>ep20</guid>
+      <pubDate>Fri, 27 March 2026 16:26:00 GMT</pubDate>
+      <enclosure url="https://deadly.team/podcast/files/ep20_BurgerAndFries.m4a"
+                 length="34349315"
+                 type="audio/m4a"/>
+    </item>
 
   </channel>
 </rss>
