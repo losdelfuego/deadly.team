@@ -195,5 +195,14 @@
                  type="audio/m4a"/>
     </item>
 
+    <item>
+      <title>When You've Held Excalibur</title>
+      <guid>ep21</guid>
+      <pubDate>Wed, 01 April 2026 17:26:00 GMT</pubDate>
+      <enclosure url="https://deadly.team/podcast/files/ep21_WhenYouveHeldExcalibur.m4a"
+                 length="37520907"
+                 type="audio/m4a"/>
+    </item>
+
   </channel>
 </rss>
