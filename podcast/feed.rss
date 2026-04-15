@@ -204,5 +204,13 @@
                  type="audio/m4a"/>
     </item>
 
+    <item>
+      <title>Ghost Law</title>
+      <guid>ep22</guid>
+      <pubDate>Wed, 15 April 2026 12:49:00 GMT</pubDate>
+      <enclosure url="https://deadly.team/podcast/files/ep21_WhenYouveHeldExcalibur.m4a"
+                 length="18505667"
+                 type="audio/m4a"/>
+    </item>
   </channel>
 </rss>
