@@ -212,5 +212,21 @@
                  length="18505667"
                  type="audio/m4a"/>
     </item>
+    <item>
+      <title>First Love Lost</title>
+      <guid>ep23</guid>
+      <pubDate>Wed, 29 April 2026 14:49:00 GMT</pubDate>
+      <enclosure url="https://deadly.team/podcast/files/ep23_FirstLoveLost.m4a"
+                 length="41158883"
+                 type="audio/m4a"/>
+    </item>
+    <item>
+      <title>Down With the Clown</title>
+      <guid>ep24</guid>
+      <pubDate>Wed, 29 April 2026 14:49:00 GMT</pubDate>
+      <enclosure url="https://deadly.team/podcast/files/ep24_DownWithTheClown.m4a"
+                 length="30970794"
+                 type="audio/m4a"/>
+    </item>
   </channel>
 </rss>
